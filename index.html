@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meme Maker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f7f7f7;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+    #createBtn {
+      margin-top: 20px;
+      width: 100%;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #memePreview {
+      margin-top: 30px;
+      position: relative;
+      text-align: center;
+    }
+    #memePreview img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .meme-text {
+      position: absolute;
+      width: 100%;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px black;
+      left: 0;
+      padding: 10px;
+    }
+    .top-text {
+      top: 0;
+    }
+    .bottom-text {
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Meme Maker</h2>
+    
+    <label for="layout">Layout</label>
+    <select id="layout">
+      <option value="top">Top</option>
+      <option value="bottom">Bottom</option>
+      <option value="top-bottom">Top & Bottom</option>
+    </select>
+
+    <label for="image">Image</label>
+    <select id="image">
+      <option value="matrix">Matrix</option>
+      <option value="beach">Beach</option>
+    </select>
+
+    <label for="text1">Text 1</label>
+    <input type="text" id="text1" placeholder="Enter top text">
+
+    <label for="text2">Text 2</label>
+    <input type="text" id="text2" placeholder="Enter bottom text">
+
+    <button id="createBtn">Create</button>
+
+    <div id="memePreview"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
